@@ -66,8 +66,15 @@
                              <t-input-group label="Adress"  class=" w-full md:w-5/12 mb-4" :classes="{label:'text-gray-400 text-sm  block text-left'}">
                                 <t-input type="text" placeholder="Adress" classes="focus:outline-none focus:ring-1 focus:ring-green-200 px-4 p-2 w-full focus:shadow-md border border-gray-300 rounded-md text-gray-500"/>
                             </t-input-group>
-                             <t-input-group label="Ville"  class=" w-full md:w-5/12 mb-4" :classes="{label:'text-gray-400 text-sm  block text-left'}">
-                                <t-select placeholder="Ville" :options="['Agadir','CasaBlanca','Rabat']" classes="focus:outline-none focus:ring-1 focus:ring-green-200 px-4 p-3 w-full focus:shadow-md border border-gray-300 rounded-md text-gray-500"/>
+                             <t-input-group label="Ville"  class=" w-full md:w-5/12 mb-4 overflow-hidden" :classes="{label:'text-gray-400 text-sm  block text-left'}">
+
+                                <t-select placeholder="Ville" wrapped :options="['Agadir','CasaBlanca','Rabat']" 
+                                :classes="{
+                                  input:'focus:outline-none focus:ring-1 focus:ring-green-200 px-4 p-3 w-full     focus:shadow-md border border-gray-300 rounded-md ',
+                                  wrapper: 'relative ',
+                                  arrowWrapper: 'bg-white pointer-events-none absolute inset-y-0 right-0 flex items-center px-2',
+                                  arrow: 'fill-current h-4 w-4'                             
+                                }"/>
                             </t-input-group>
                         </div>
                     </tab-content><!--first tab-->
@@ -78,13 +85,23 @@
                         :ref="personaldetails"
                         >
                         <div class="flex p-2 flex-wrap justify-between">
-                            <t-input-group label="Post"  class=" w-full md:w-5/12 mb-4" :classes="{label:'text-gray-400 text-sm  block text-left'}">
-                                <t-select placeholder="Post" :options="['Stage','Emploi','Etudei']" classes="focus:outline-none focus:ring-1 focus:ring-green-200 px-4 p-3 w-full focus:shadow-md border border-gray-300 rounded-md text-gray-500"/>
+                            <t-input-group label="Post"  class=" w-full md:w-5/12 mb-4 text-gray-300 focus:text-gray-500 overflow-hidden" :classes="{label:'text-gray-400 text-sm  block text-left'}">
+
+                                <t-select placeholder="Post" wrapped :options="['Stage','Emploi','Etudei']" :classes="{
+                                  input:'focus:outline-none focus:ring-1 focus:ring-green-200 px-4 p-3 w-full focus:shadow-md border border-gray-300 rounded-md ',
+                                  wrapper: 'relative ',
+                                  arrowWrapper: 'bg-white w-5 h-1/2 my-auto  pointer-events-none absolute inset-y-0 right-1 flex items-center px-1 ',
+                                  arrow: 'fill-current h-100 w-4'
+
+                                }"/>
                             </t-input-group>
                             <t-input-group label="Fichier"  class=" w-full md:w-5/12 mb-4" :classes="{label:'text-gray-400 text-sm  block text-left'}">
-                                <TButton classes="px-4 p-1 w-full bg-purple-400 text-lg text-white relative focus:outline-none rounded-md ">
+                                <TButton classes="px-4 overflow-hidden p-1 w-full bg-purple-400 text-lg text-white relative focus:outline-none rounded-md ">
                                     Telecharger votre CV
                                 <t-input type="file" placeholder="exemple" title="Telecharger votre CV" classes="focus:outline-none absolute  w-full focus:shadow-md border opacity-0 top-0 left-0"/> 
+                               <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-red-400">
+                                 <!-- this span for showing the status of upload :)  -->
+                               </span> 
                                 </TButton>
                             </t-input-group>
 
@@ -95,8 +112,8 @@
                             <t-input-group label="Exemple"  class=" w-full md:w-5/12 mb-4" :classes="{label:'text-gray-400 text-sm  block text-left'}">
                                 <t-input type="text" placeholder="exemple" classes="focus:outline-none focus:ring-1 focus:ring-green-200 px-4 p-2 w-full focus:shadow-md border border-gray-300 rounded-md text-gray-500"/>
                             </t-input-group>
-                            <t-input-group label="Motivation"  class=" w-full mb-4"  :classes="{label:'text-gray-400 text-sm  block text-left'}">
-                                <t-textarea placholder="Enter your motivation ... " classes="focus:outline-none focus:ring-1 focus:ring-green-200 px-4 p-2 w-full focus:shadow-md border border-gray-300 rounded-md text-gray-500"/>
+                            <t-input-group label="Motivation"  class=" w-full mb-4 h-30"  :classes="{label:'text-gray-400 text-sm  block text-left'}">
+                                <t-textarea placholder="Enter your motivation ... " classes="focus:outline-none focus:ring-1 focus:ring-green-200 px-4 p-2 w-full focus:shadow-md border border-gray-300 rounded-md text-gray-500 " maxlenght="500" style="resize: none;height: 9rem"/>
                             </t-input-group>
                         </div>
                     </tab-content><!--second tab-->

@@ -8,8 +8,8 @@
             }">
             <template v-solt:header>
                <div class="py-2 px-4 text-left mb-7">
-                   <p class="text-purple-500 uppercase text-3xl sm:text-3xl md:text-3xl md:font-bold mb-2">Welcome to sKwila &#128508; &#128304;</p>
-                   <p class="text-lg  text-gray-400 block w-full md:w-3/4">Please sign-in to your account and start the adventure</p>
+                   <p class="text-purple-500 uppercase text-3xl sm:text-3xl md:text-3xl md:font-bold mb-2">Bienvenue à sKwila &#128508; &#128304;</p>
+                   <p class="text-lg  text-gray-400 block w-full md:w-3/4">Veuillez vous connecter a votre compte pour commencer !</p>
                </div> 
             </template>
             <template v-solt:body>
@@ -20,12 +20,12 @@
                     >
                                 <TInput type="email" placeholder="exemple@exemple.com" tabindex="1"         classes="font-thin focus:outline-none focus:ring-1 focus:ring-green-200 px-4 p-2 w-full focus:shadow-md border border-gray-300 rounded-md text-gray-500 "/>
                 </TInputgroup>
-                <TInputgroup label="Password"  class=" w-full px-4 relative"
+                <TInputgroup label="Mot de passe"  class=" w-full px-4 relative"
                                 :classes="{
                                 label:'text-gray-400 block text-sm  text-left'   
                            }"
                     >
-                                <TInput :type="!isVisible?  'password': 'text'" v-model="password" placeholder="Password" classes="font-thin focus:outline-none focus:ring-1 focus:ring-green-200 px-4 p-2 w-full focus:shadow-md border border-gray-300 rounded-md text-gray-500 " maxlength="35"/>
+                                <TInput :type="!isVisible?  'password': 'text'" v-model="password" placeholder="Mot de passe" classes="font-thin focus:outline-none focus:ring-1 focus:ring-green-200 px-4 p-2 w-full focus:shadow-md border border-gray-300 rounded-md text-gray-500 " maxlength="35"/>
                                 <span @click="isVisible = !isVisible" class="absolute top-1/2 right-0 text-purple-500 px-2 cursor-pointer w-10" style="right: 5% ">
                                     <i v-if="!isVisible" class="fas fa-eye-slash"></i>
                                     <i v-if="isVisible" class="fas fa-eye"></i>
@@ -33,21 +33,22 @@
                 </TInputgroup>
                 <div class="w-full p-4  text-purple-500 text-right cursor-pointer flex justify-between">
                     <label class="flex items-center cursor-pointer">
+
                         <TInput type="checkbox" name="remember-me" value="remember-me" fixedClasses="text-orange-600 border border-red-500" :classes="{
                         default:'border-purple-300 rounded-md shadow-sm transition duration-100 ease-in-out       h-5 w-5  transform focus:border-0 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50  focus:ring-offset-0 disabled:opacity-50 disabled:cursor-not-allowed'
                         }"/>
-                       <span> &nbsp;Remmber Me</span>
+                       <span> &nbsp;Souviens-toi de moi</span>
                     </label>
-                    <p>Forgot Password?</p>
+                    <p>Mot de passe oublié?</p>
                 </div>
             </template>
             <template v-solt:footer>
                <div class="py-2 px-4 text-xl text-blue-500 ">
-                    <TButton classes="bg-purple-500 text-white text-md  block  rounded py-2 px-7 mx-auto w-full focus:outline-none focus:ring focus:border-purple-300">Login</TButton>
+                    <TButton classes="bg-purple-500 text-white text-md  block  rounded py-2 px-7 mx-auto w-full focus:outline-none focus:ring focus:border-purple-300">Connexion</TButton>
                </div> 
                <div class="w-full py-5 flex items-center justify-center text-lg">
                    <span class="block">
-                        New on our platform? <router-link to="/register">  <p class="inline-block text-purple-500"> &nbsp;&nbsp; Creat an account</p></router-link>
+                       Nouveau sur notre platforme? <router-link to="/register">  <p class="inline-block text-purple-500"> &nbsp;&nbsp; Créer un compte !</p></router-link>
                    </span>
                </div>
             </template>
