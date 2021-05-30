@@ -84,7 +84,7 @@
                         icon="fas fa-user-tie"
                         :ref="personaldetails"
                         >
-                        <div class="flex p-2 flex-wrap justify-between">
+                        <div class="flex flex-wrap justify-between">
                             <t-input-group label="Post"  class=" w-full md:w-5/12 mb-4 text-gray-300 focus:text-gray-500 overflow-hidden" :classes="{label:'text-gray-400 text-sm  block text-left'}">
 
                                 <t-select placeholder="Post" wrapped :options="['Stage','Emploi','Etudei']" :classes="{
@@ -99,7 +99,7 @@
                                 <TButton classes="px-4 overflow-hidden p-1 w-full bg-purple-400 text-lg text-white relative focus:outline-none rounded-md ">
                                     Telecharger votre CV
                                 <t-input type="file" placeholder="exemple" title="Telecharger votre CV" classes="focus:outline-none absolute  w-full focus:shadow-md border opacity-0 top-0 left-0"/> 
-                               <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-red-400">
+                               <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-green-100">
                                  <!-- this span for showing the status of upload :)  -->
                                </span> 
                                 </TButton>
