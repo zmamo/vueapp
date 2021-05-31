@@ -33,14 +33,16 @@
                             <t-input-group label="Civilite"  class="w-full md:w-5/12 mb-4 " :classes="{label:'text-gray-400 text-sm  block text-left'}">
                                 <div class="px-4 p-2 flex justify-around focus:shadow-md">
                                     <label class="">
-                                        <t-radio name="options" value="a" checked :classes="{
-                                            input:'text-red-500 transition duration-100 ease-in-out border-gray-300 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 focus:ring-offset-0 disabled:opacity-50 disabled:cursor-not-allowed w-2 h-3'
-                                        }"/>
-                                        <span class="ml-2 text-sm">Male</span>
+                                        <t-radio name="options" value="a" label="Male" wrapped :fixedClasses="{
+                                      input:'text-purple-500 transition duration-100 ease-in-out border-purple-400  w-5 h-5 shadow-sm  focus:ring-1 focus:ring-purple-300 focus:ring-opacity-50 focus:ring-offset-0 disabled:opacity-50 disabled:cursor-not-allowed',
+                                      label:'ml-1 text-md checked:text-purple-500 font-custom font-thin'
+                                          }"/>
                                     </label>
                                     <label class="">
-                                        <t-radio name="options" value="b" />
-                                        <span class="ml-2 text-sm">Femmale</span>
+                                        <t-radio name="options" value="b" wrapped label="Femmale" :fixedClasses="{
+                                      input:'text-purple-500 transition duration-100 ease-in-out border-purple-400  w-5 h-5 shadow-sm  focus:ring-1 focus:ring-purple-300 focus:ring-opacity-50 focus:ring-offset-0 disabled:opacity-50 disabled:cursor-not-allowed',
+                                      label:'ml-1 text-md text-purple-500 font-custom font-thin'
+                                          }" />
                                     </label>
                                 </div>
                             </t-input-group>

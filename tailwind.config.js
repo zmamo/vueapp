@@ -23,11 +23,16 @@ module.exports = {
        '1/2': '50%',
        '70': '70%',
        'full': '100%',
+      },
+      fontFamily:{
+        'custom':['Montserrat','sans-serif']
       }
     }, //extend
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+  	require('@tailwindcss/forms'),
+  ],
 };

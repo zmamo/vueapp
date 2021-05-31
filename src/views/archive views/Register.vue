@@ -213,3 +213,13 @@ export default {
   background-color: #000;
 }
 </style>
+
+
+
+
+ <template v-solt:header>
+               <div class="py-2 px-4 text-left mb-7">
+                   <p class="text-purple-500 uppercase text-3xl sm:text-3xl md:text-3xl md:font-bold mb-2">Register in sKwila &#128509; &#10024;</p>
+                   <p class="text-lg  text-gray-400 block w-full md:w-3/4">Easy Way to your dream </p>
+               </div> 
+</template>
